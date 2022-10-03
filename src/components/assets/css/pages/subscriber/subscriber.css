@@ -1,0 +1,31 @@
+.page-admin-subscriber-edit .profilePhoto .ant-upload-list-picture-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.page-careprofessional-subscriber-current-completed .ant-table table .ant-table-thead th {
+  background-color: #027273;
+  color: #ffffff;
+}
+
+.page-careprofessional-subscriber-current-completed .ant-table table .ant-table-thead th .ant-table-column-sorter
+.ant-table-column-sorter-inner
+.anticon:not(.active) {
+  color: #ffffff;
+}
+
+.page-careprofessional-subscriber-current-completed .ant-row-modules .ant-btn-modules {
+  height: 210px;
+}
+
+/* Media Query for Large screens */
+/* Media Query for Laptops and Desktops */
+/* Media Query for Tablets Ipads portrait mode */
+/* Media Query for Tablets, Ipads and below  */
+/* Media Query for low resolution  Tablets, Ipads */
+/* Media Query for Mobile Devices */
+/*# sourceMappingURL=subscriber.css.map */

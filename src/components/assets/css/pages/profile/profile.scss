@@ -1,0 +1,136 @@
+@import "../../variables/variables.scss";
+.page-profile {
+	.profilePhoto {
+		.ant-upload-list-picture-card {
+			display: flex;
+			justify-content: center;
+
+			.ant-upload-list-picture-card-container {
+				width: 200px;
+				height: 200px;
+
+				.ant-upload-list-item {
+					border-color: $color6;
+					box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+					-webkit-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+					-moz-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+				}
+			}
+		}
+	}
+
+	.e_signature_canvas {
+		border: 1px solid $color9;
+		width: 100%;
+	}
+}
+
+.modal-account-deactivate {
+	.ant-modal-footer {
+		text-align: right !important;
+	}
+}
+
+.modal-change-password {
+	.ant-modal-footer {
+		text-align: right !important;
+	}
+}
+
+.modal-change-2-factor-authentication {
+	.ant-modal-footer {
+		text-align: right !important;
+	}
+}
+
+.private-layout {
+	.top-banner-adss {
+		text-align: center;
+		background-color: #f1f3f2;
+		display: flex;
+		justify-content: center;
+		display: none;
+	}
+	.top-banner-adss.has-data {
+		border-top: 1px solid $pageHeaderBorderColor;
+		padding: 20px 0px;
+		display: flex;
+
+		.top-banner-adss-inner {
+			position: relative;
+
+			.icon-close {
+				position: absolute;
+				right: -15px;
+				top: -10px;
+				background-color: $color9;
+				padding: 0px 4px;
+				color: $color12;
+				border-radius: 50%;
+				font-size: 10px;
+				cursor: pointer;
+			}
+			.top-banner-adss-inner-image {
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+	.right-banner-adss {
+		display: none;
+	}
+	.right-banner-adss.has-data {
+		display: block;
+		.right-banner-adss-inner {
+			position: relative;
+			.icon-close {
+				position: absolute;
+				left: -8px;
+				top: -10px;
+				background-color: $color9;
+				padding: 0px 5px;
+				color: $color12;
+				border-radius: 50%;
+				cursor: pointer;
+			}
+
+			.right-banner-adss-inner-image {
+				img {
+					width: 100%;
+					border: 1px solid $pageHeaderBorderColor;
+				}
+			}
+		}
+	}
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* Media Query for Tablets, Ipads and below  */
+@media (max-width: 768px) {
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+}
+
+@media (max-width: 375px) {
+}
+
+@media (max-width: 320px) {
+}

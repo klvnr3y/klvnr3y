@@ -1,0 +1,554 @@
+@import "../variables/variables";
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: $font;
+}
+
+.scrollbar-1 {
+  $scrollbar-1-thumb-width: 8px;
+  $scrollbar-1-thumb-color: rgba(246, 246, 255, 0.57);
+  $scrollbar-1-track-color: rgba(205, 205, 209, 0.35);
+
+  &::-webkit-scrollbar {
+    width: $scrollbar-1-thumb-width;
+    height: $scrollbar-1-thumb-width;
+
+    &-track {
+      background-clip: content-box;
+      border: ($scrollbar-1-thumb-width/4) solid transparent;
+    }
+
+    &-thumb {
+      background-color: $scrollbar-1-thumb-color;
+
+      &:hover {
+        background-color: mix($scrollbar-1-thumb-color, #000, 90%);
+      }
+    }
+    &-corner,
+    &-track {
+      background-color: $scrollbar-1-track-color;
+    }
+  }
+
+  // Firefox
+  scrollbar-width: thin;
+  scrollbar-color: $scrollbar-1-thumb-color $scrollbar-1-track-color;
+}
+
+.scrollbar-2 {
+  $scrollbar-2-thumb-width: 5px;
+  $scrollbar-2-thumb-color: $color8;
+  $scrollbar-2-track-color: #bbb;
+
+  // Chrome & Opera
+  &::-webkit-scrollbar {
+    width: $scrollbar-2-thumb-width;
+    height: $scrollbar-2-thumb-width;
+
+    &-track {
+      background-color: $scrollbar-2-track-color;
+    }
+
+    &-thumb {
+      background-color: $scrollbar-2-thumb-color;
+    }
+
+    &-track,
+    &-thumb {
+      border-radius: 5px;
+    }
+  }
+
+  // Firefox
+  scrollbar-width: thin;
+  scrollbar-color: $scrollbar-2-thumb-color $scrollbar-2-track-color;
+}
+
+.globalLoading {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999999999999;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/** colors */
+.white {
+  color: $white !important;
+}
+.color-secondary {
+  color: $secondary !important;
+}
+.color-1 {
+  color: $color1 !important;
+}
+.color-2 {
+  color: $color2 !important;
+}
+.color-3 {
+  color: $color3 !important;
+}
+.color-4 {
+  color: $color4 !important;
+}
+.color-5 {
+  color: $color5 !important;
+}
+.color-6 {
+  color: $color6 !important;
+}
+.color-7 {
+  color: $color7 !important;
+}
+.color-7 {
+  color: $color7 !important;
+}
+.color-8 {
+  color: $color8 !important;
+}
+.color-9 {
+  color: $color9 !important;
+}
+.color-10 {
+  color: $color10 !important;
+}
+.color-11 {
+  color: $color11 !important;
+}
+.color-12 {
+  color: $color12 !important;
+}
+.color-13 {
+  color: $color13 !important;
+}
+.color-14 {
+  color: $color14 !important;
+}
+.color-15 {
+  color: $color15 !important;
+}
+
+.bgwhite {
+  background-color: $white !important;
+}
+.bgcolor-1 {
+  background-color: $color1 !important;
+}
+.bgcolor-2 {
+  background-color: $color2 !important;
+}
+.bgcolor-3 {
+  background-color: $color3 !important;
+}
+.bgcolor-4 {
+  background-color: $color4 !important;
+}
+.bgcolor-5 {
+  background-color: $color5 !important;
+}
+.bgcolor-6 {
+  background-color: $color6 !important;
+}
+.bgcolor-7 {
+  background-color: $color7 !important;
+}
+.bgcolor-7 {
+  background-color: $color7 !important;
+}
+.bgcolor-8 {
+  background-color: $color8 !important;
+}
+.bgcolor-9 {
+  background-color: $color9 !important;
+}
+.bgcolor-10 {
+  background-color: $color10 !important;
+}
+.bgcolor-11 {
+  background-color: $color11 !important;
+}
+.bgcolor-12 {
+  background-color: $color12 !important;
+}
+.bgcolor-13 {
+  background-color: $color13 !important;
+}
+.bgcolor-14 {
+  background-color: $color14 !important;
+}
+.bgcolor-15 {
+  background-color: $color15 !important;
+}
+
+.float-label
+  .ant-input-group-wrapper.ant-input-group-wrapper-has-feedback
+  .ant-input-group-addon
+  .ant-btn {
+  border: 0px;
+  border-left: 1px solid $color7;
+  border-radius: 0px;
+}
+.float-label
+  .ant-input-group-wrapper.ant-input-group-wrapper-has-feedback
+  .ant-input-wrapper.ant-input-group
+  .ant-input-affix-wrapper.ant-input-affix-wrapper-has-feedback {
+  border: 0px;
+}
+
+.ant-input-search .ant-input:focus,
+.ant-input-search .ant-input-focused,
+.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input)
+  .ant-select-selector,
+.ant-input:focus,
+.ant-input-focused,
+.ant-input-number-affix-wrapper:focus,
+.ant-input-number-affix-wrapper-focused,
+.ant-input-affix-wrapper:focus,
+.ant-input-affix-wrapper-focused,
+.ant-picker-focused {
+  box-shadow: 0 0 0 1px rgba(245, 105, 0, 0.2);
+}
+
+.ant-input-search
+  .ant-input:hover
+  + .ant-input-group-addon
+  .ant-input-search-button:not(.ant-btn-primary),
+.ant-input-search
+  .ant-input:focus
+  + .ant-input-group-addon
+  .ant-input-search-button:not(.ant-btn-primary),
+.ant-select:not(.ant-select-disabled):hover .ant-select-selector,
+.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input)
+  .ant-select-selector,
+.ant-input:hover,
+.ant-input:focus,
+.ant-input-focused,
+.ant-input-number-affix-wrapper:not(.ant-input-number-affix-wrapper-disabled):hover,
+.ant-input-number-affix-wrapper:focus,
+.ant-input-number-affix-wrapper-focused,
+.ant-input-number-affix-wrapper:focus,
+.ant-input-number-affix-wrapper-focused,
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover,
+.ant-input-affix-wrapper:focus,
+.ant-input-affix-wrapper-focused,
+.ant-picker-focused,
+.ant-picker:hover,
+.ant-picker-focused,
+.ant-radio-wrapper .ant-radio,
+.ant-input-search .ant-input:hover,
+.ant-input-search .ant-input:focus,
+.checkbox_yes .ant-checkbox,
+.ant-checkbox:hover .ant-checkbox-inner,
+.ant-checkbox.ant-checkbox-checked .ant-checkbox-inner,
+.ant-checkbox.ant-checkbox-checked::after {
+  border-color: $color1;
+}
+.ant-radio-wrapper .ant-radio,
+.ant-select:not(.ant-select-customize-input) .ant-select-selector,
+.float-label .ant-input,
+.float-label .mask-input,
+.float-label .ant-picker,
+.float-label .ant-input-affix-wrapper-has-feedback,
+.float-label .ant-input-number-affix-wrapper,
+.float-label .ant-input-group-wrapper.ant-input-group-wrapper-has-feedback {
+  border: 1px solid $color7;
+}
+.float-label
+  .ant-input-group-wrapper.ant-input-group-wrapper-has-feedback
+  .ant-input-group-addon {
+  border: 0px;
+  border-radius: 0px;
+  border-top: 1px solid $color7;
+  // border: 1px solid $color7;
+  .ant-btn {
+    background-color: $color1;
+    color: $white;
+  }
+}
+.ant-checkbox.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: $color1;
+}
+.ant-input-group-wrapper.ant-input-group-wrapper-has-feedback {
+  @at-root .ant-input-group .ant-input-affix-wrapper-focused {
+    border: 1px solid $color1;
+  }
+}
+.ant-select-arrow,
+.as-placeholder {
+  color: $color7;
+}
+
+.ant-select-table-pagesize.ant-select-focused .ant-select-arrow {
+  color: $black;
+}
+.ant-select-item-option-active:not(.item-select-item-option-disabled) {
+  background-color: $color1 !important;
+  color: $white;
+}
+
+.table-filter-alphabet .ant-btn {
+  color: $color6;
+}
+.viewAsBoxRight {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999999;
+
+  text-align: center;
+  border-right: 5px solid #e4151f;
+}
+.viewAsBoxLeft {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999999999;
+  text-align: center;
+  border-right: 5px solid #e4151f;
+}
+.viewAsBoxTop {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999999999;
+  text-align: center;
+  border-top: 5px solid #e4151f;
+}
+.viewAsBoxBottom {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 999999999;
+  text-align: center;
+  border-top: 5px solid #e4151f;
+}
+
+.tooltip {
+  position: absolute;
+  right: 37px;
+  display: flex;
+  top: 15px;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  margin-left: -99px;
+}
+
+.tooltip .Top {
+  bottom: 135%;
+  left: 50%;
+}
+.tooltip .Bottom {
+  top: 150%;
+  left: 50%;
+}
+.tooltip .Left {
+  top: -6px;
+  left: 640%;
+}
+.tooltip .Right {
+  top: -6px;
+  right: 145%;
+}
+
+.tooltip .Top::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+}
+
+.tooltip .Top.lightblue::after {
+  content: "";
+  border-color: #81c6e7 transparent transparent transparent !important;
+}
+.tooltip .Top.gold::after {
+  content: "";
+  border-color: #d6ae71 transparent transparent transparent !important;
+}
+.tooltip .Top.blue::after {
+  content: "";
+  border-color: #6b91bb transparent transparent transparent !important;
+}
+
+.tooltip .Bottom::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+}
+
+.tooltip .Bottom.lightblue::after {
+  content: "";
+  border-color: transparent transparent #81c6e7 transparent;
+}
+.tooltip .Bottom.gold::after {
+  content: "";
+  border-color: transparent transparent #d6ae71 transparent;
+}
+.tooltip .Bottom.blue::after {
+  content: "";
+  border-color: transparent transparent #6b91bb transparent;
+}
+
+.tooltip .Left::after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+}
+
+.tooltip .Left.lightblue::after {
+  content: "";
+  border-color: transparent #81c6e7 transparent transparent;
+}
+.tooltip .Left.gold::after {
+  content: "";
+  border-color: transparent #d6ae71 transparent transparent;
+}
+.tooltip .Left.blue::after {
+  content: "";
+  border-color: transparent #6b91bb transparent transparent;
+}
+
+.tooltip .Right::after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent black;
+}
+
+.tooltip .Right.lightblue::after {
+  content: "";
+  border-color: transparent transparent transparent #81c6e7;
+}
+.tooltip .Right.gold::after {
+  content: "";
+  border-color: transparent transparent transparent #d6ae71;
+}
+.tooltip .Right.blue::after {
+  content: "";
+  border-color: transparent transparent transparent #6b91bb;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.tooltip-collapse {
+  right: 15px;
+  top: 10px;
+  svg {
+    color: #c59f4e;
+  }
+}
+
+.tooltip-input {
+  right: 30px;
+  top: 11px;
+  svg {
+    color: #d2d4d3;
+  }
+}
+.tooltip-select {
+  top: 11px;
+  right: 48px;
+  svg {
+    color: #d2d4d3;
+  }
+}
+.tooltip-selection {
+  top: 11px;
+  right: 47px;
+  svg {
+    color: #d2d4d3;
+  }
+}
+
+.tooltip .blue {
+  background-color: #6b91bb;
+}
+
+.tooltip .gold {
+  background-color: #d6ae71;
+}
+.tooltip .lightblue {
+  background-color: #81c6e7;
+}
+
+.tooltip-is-not-required {
+  right: 8px;
+}
+
+/** end colors */
+
+/** others */
+
+/** end others */
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* Media Query for Tablets, Ipads and below  */
+@media (max-width: 768px) {
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+}
+
+@media (max-width: 375px) {
+}
+
+@media (max-width: 320px) {
+}
